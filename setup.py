@@ -41,6 +41,8 @@ setup(
     ],
     install_requires=[
         'awscrt==0.14.6',
+        'requests==2.28.1',
+        'Pyyaml==6.0'
     ],
     python_requires='>=3.6',
 )
