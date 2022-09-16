@@ -32,7 +32,7 @@ setup(
     long_description=_load_readme(),
     long_description_content_type='text/markdown',
     author='AWS SDK Common Runtime Team',
-    url='https://github.com/aws/aws-iot-device-sdk-python-v2',
+    url='https://github.com/aws-satsawat/aws-iot-device-sdk-python-v2',
     packages=find_packages(include=['awsiot*']),
     classifiers=[
         "Programming Language :: Python :: 3",
