@@ -1,5 +1,7 @@
 # AWS IoT Device SDK v2 for Python
 
+__Remark__: The setup.py has been updated to install _requests_ and _PyYaml_ packages as part of new python script in the samples folder
+
 [![Version](https://img.shields.io/pypi/v/awsiotsdk.svg?style=flat)](https://pypi.org/project/awsiotsdk/)
 
 This document provides information about the AWS IoT Device SDK v2 for Python.
