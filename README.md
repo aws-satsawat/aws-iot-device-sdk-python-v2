@@ -48,7 +48,7 @@ python3 -m pip install awsiotsdk
 mkdir sdk-workspace
 cd sdk-workspace
 # Clone the repository
-git clone https://github.com/aws/aws-iot-device-sdk-python-v2.git
+git clone https://github.com/aws-satsawat/aws-iot-device-sdk-python-v2.git
 # Install using Pip
 python3 -m pip install ./aws-iot-device-sdk-python-v2
 ```
