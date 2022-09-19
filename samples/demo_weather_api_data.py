@@ -32,14 +32,17 @@ allowed_actions = ['both', 'publish', 'subscribe']
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--city', action='store', dest='api_city', default='Manila', help='The city to retrieve the weather data')
-parser.add_argument('-r', '--root-ca', action='store', dest='root_ca_path', help='Root CA file path')
-parser.add_argument('-c', '--cert', action='store', required=True, dest='certificate_path', help='Certificate file path')
-parser.add_argument('-k', '--key', action='store', required=True, dest='private_key_path', help='Private key file path')
+parser.add_argument('-r', '--root-ca', action='store', dest='root_ca_path', 
+                    help='The absolute path to Root CA file')
+parser.add_argument('-c', '--cert', action='store', required=True, dest='certificate_path', 
+                    help='The absolute path to AWS IoT Thing certificate file')
+parser.add_argument('-k', '--key', action='store', required=True, dest='private_key_path', 
+                    help='The absolute path to AWS IoT Thing private key file')
 parser.add_argument('-n', '--thing-name', action='store', required=True, dest='thing_name', help='Targeted thing name')
 parser.add_argument('-t', '--topic', action='store', dest='topic', default='demo/weather', help='Targeted topic')
 parser.add_argument('-m', '--mode', action='store', dest='mode', default='both',
                     help='Operation modes: %s'%str(allowed_actions))
-parser.add_argument('--region', action='store', dest='region', default='ap-southeast-1')
+parser.add_argument('--region', action='store', dest='region', default='ap-southeast-1', help='The region where AWS is setup')
 parser.add_argument('--print-discover-resp-only', action='store_true', dest='print_discover_resp_only', default=False)
 parser.add_argument('-v', '--verbosity', choices=[x.name for x in LogLevel], default=LogLevel.NoLogs.name,
                     help='Logging level')
